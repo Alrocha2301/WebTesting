@@ -22,3 +22,11 @@ Caso de Teste 02 - Pesquisa de um Produto
     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
     Clicar no botão de pesquisa
     Verificar se foi para a página de resultado de pesquisa
+
+Caso de Teste 03 - Fazer Login com email e senha válidos
+    [Documentation]        Esse teste verifica o login com dados de usuário válidos
+    Acessar a home page do site Amazon.com.br
+    Clicar no botão para fazer login
+    Digitar o nome de usuário válido em campo de usuário e clicar em Continuar
+    Digitar senha correta correta em campo senha e clicar em Fazer Login
+    Confirmar sucesso de acesso

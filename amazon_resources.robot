@@ -30,8 +30,6 @@ Verificar se o título da página fica "${TITULO}"
     Title Should Be    title=${TITULO}
 
 Verificar se aparece a categoria "${NOME_CATEGORIA}"
-    # Wait Until Page Contains        text=${NOME_CATEGORIA}
-    # Wait Until Page Contains Element    locator=${CATEGORIA_LIVROS}
     Element Should Be Visible    locator=(//span[contains(.,'${NOME_CATEGORIA}')])[2]
 
 Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
@@ -43,3 +41,24 @@ Clicar no botão de pesquisa
 Verificar se foi para a página de resultado de pesquisa    
     Wait Until Element Is Visible    locator=//a[@id='nav-logo-sprites']   
     Title Should Be    title=Amazon.com.br : Xbox Series S
+
+Clicar no botão para fazer login
+    Click Element    locator=//span[contains(@id,'nav-link-accountList-nav-line-1')]
+
+Digitar o nome de usuário válido em campo de usuário e clicar em Continuar
+    Wait Until Element Is Visible    locator=//input[contains(@id,'ap_email')]
+    Input Text    locator=//input[contains(@id,'ap_email')]    text=alexandre-apr@hotmail.com
+    Click Element    locator=//input[contains(@id,'continue')]
+
+Digitar senha correta correta em campo senha e clicar em Fazer Login
+    Wait Until Element Is Visible    locator=//input[contains(@id,'signInSubmit')]
+    Input Password    locator=//input[contains(@id,'ap_password')]    password=Salesiano01
+    Click Element    locator=//input[contains(@id,'signInSubmit')]
+
+Confirmar sucesso de acesso
+    Wait Until Element Is Visible    locator=//span[contains(.,'Olá, Alexandre')]
+    Element Should Be Visible    locator=//span[contains(.,'Olá, Alexandre')]
+    
+
+
+
