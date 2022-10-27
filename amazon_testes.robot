@@ -25,6 +25,7 @@ Caso de Teste 02 - Pesquisa de um Produto
 
 Caso de Teste 03 - Fazer Login com email e senha válidos
     [Documentation]        Esse teste verifica o login com dados de usuário válidos
+    [Tags]                 login
     Acessar a home page do site Amazon.com.br
     Clicar no botão para fazer login
     Digitar o nome de usuário válido em campo de usuário e clicar em Continuar
